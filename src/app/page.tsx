@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import React from 'react'
 import Button from '@/components/Button'
 import Logo from '../assets/logo-light.png'
 import LogoBlack from '../assets/logo.png'
@@ -8,7 +8,7 @@ import { Inter, Roboto } from 'next/font/google'
 import { FaFacebookF,FaTwitter,FaBars,FaLinkedinIn } from 'react-icons/fa';
 import { TiSocialPinterestCircular } from 'react-icons/ti';
 import { IoIosWifi} from 'react-icons/io';
-
+/* eslint-disable react/no-unescaped-entities */
 import { BsMoon,BsArrowRight} from 'react-icons/bs';
 import Header from '@/components/Header'
 
@@ -20,19 +20,6 @@ const roboto = Roboto({
 })
 export default function Home() {
 
-  // const [fix,setFix] = useState(false)
-  // const setFixed = ()=>{
-  //   if(window.screenY >= 392){
-  //     setFix(true)
-  //   }else{
-  //     setFix(false)
-  //   }
-  // }
-
-  // useEffect(()=>{
-  //   window.addEventListener('scroll',setFixed)
-  //   return()=>window.removeEventListener('scroll',setFixed)
-  // },[])
   
   return (
     <main className={`min-h-screen  ${inter.className}`}>
@@ -123,7 +110,7 @@ export default function Home() {
             <div className="">
               <Image alt='' src={LogoBlack}/>
             </div>
-            <p className='text-gray-600 text-[14px] font-[400]'>© Copyright 2022 - Gigaland by Designesia</p>
+            <p className='text-gray-600 text-[14px] font-[400]'> Copyright 2022 - Gigaland by Designesia</p>
             </div>
             <div className="flex gap-2">
               <span className='py-2 px-2 rounded-md text-white bg-[#403f83]'><FaFacebookF/></span>

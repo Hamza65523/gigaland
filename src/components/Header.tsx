@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { MdKeyboardArrowDown} from 'react-icons/md';
 import { SlArrowDown} from 'react-icons/sl';
@@ -34,6 +34,20 @@ const Header = () => {
         },
       ]
       const [colpass,setColpass] = useState(false)
+      const [fix,setFix] = useState(false)
+  const setFixed = ()=>{
+    if(window.screenY >= 392){
+      setFix(true)
+    }else{
+      setFix(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll',setFixed)
+    return()=>window.removeEventListener('scroll',setFixed)
+  },[])
+  
   return (
     <div>
         <div className="w-full">
