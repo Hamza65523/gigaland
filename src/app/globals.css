@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+
+* {
+    --body-font: "DM Sans", Helvetica, Arial, sans-serif;
+    --title-font: "DM Sans", Helvetica, Arial, sans-serif;
+    --dark-scheme-color: #040836;
+    --dark-scheme-color-2: #0d1250;
+    --dark-scheme-font-color: #999999;
+}
