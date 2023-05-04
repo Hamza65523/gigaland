@@ -87,7 +87,7 @@ const Header = () => {
       <nav>
         <ul className='flex xl:gap-6 gap-4 items-center'>
         {NavData.map((items,index)=>(
-          <li key={index} className={`flex items-center font-sp text-[14px] font-[600] cursor-pointer  text-white`}>{items.name}
+          <li key={index} className={`flex items-center font-sp relative after:absolute  after:h-[3px] after:transition-all delay-500 after:mt-1 after:rounded-md hover:after:w-full after:w-0 after:bg-purple-600 after:content-[''] after:left-0 after:bottom-0 text-[14px] font-[600] cursor-pointer  text-white`}>{items.name}
           <MdKeyboardArrowDown  className='text-[rgba(255,255,255,0.5)] text-xl'/></li>
           ))}
         </ul>
