@@ -53,8 +53,8 @@ const Header = () => {
      </div>
       <div className={`${colpass?'':'hidden'} lg:hidden xl:hidden  transition-all bg-white`}>
         <ul>
-        {NavData.map((items)=>(
-          <li className={`flex justify-between items-center font-sp text-[14px] w-full py-2  px-2 border-b font-[600] cursor-pointer  text-gray-500`}>{items.name}
+        {NavData.map((items,index)=>(
+          <li key={index} className={`flex justify-between items-center font-sp text-[14px] w-full py-2  px-2 border-b font-[600] cursor-pointer  text-gray-500`}>{items.name}
           <SlArrowDown  className='text-gray-500 text-xl'/></li>
           ))}
         </ul>
@@ -71,8 +71,8 @@ const Header = () => {
       <div className="flex items-center lg:gap-3 xl:gap-4">
       <nav>
         <ul className='flex xl:gap-6 gap-4 items-center'>
-        {NavData.map((items)=>(
-          <li className={`flex items-center font-sp text-[14px] font-[600] cursor-pointer  text-white`}>{items.name}
+        {NavData.map((items,index)=>(
+          <li key={index} className={`flex items-center font-sp text-[14px] font-[600] cursor-pointer  text-white`}>{items.name}
           <MdKeyboardArrowDown  className='text-[rgba(255,255,255,0.5)] text-xl'/></li>
           ))}
         </ul>

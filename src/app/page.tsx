@@ -82,24 +82,24 @@ export default function Home() {
           <div className="mt-4">
             <h1 className='font-[700] text-[16px]'>MarketPlace</h1>
             <ul className='flex flex-col gap-2 mt-4'>
-              {['All NFTs','Art','Music','Domain Names','Virtual World','Collectibles'].map((items)=>(
-              <li>{items}</li>
+              {['All NFTs','Art','Music','Domain Names','Virtual World','Collectibles'].map((items,index)=>(
+              <li key={index}>{items}</li>
               ))}
             </ul>
           </div>
           <div className="mt-4">
           <h1 className='font-[700] text-[16px]'>Resources</h1>
             <ul className='flex flex-col gap-2 mt-4'>
-            {['Help Center','Partners','Suggestions','Discord','Docs','Newsletter'].map((items)=>(
-              <li>{items}</li>
+            {['Help Center','Partners','Suggestions','Discord','Docs','Newsletter'].map((items,index)=>(
+              <li key={index}>{items}</li>
               ))}
             </ul>
           </div>
           <div className="mt-4">
           <h1 className='font-[700] text-[16px]'>Community</h1>
             <ul className='flex flex-col gap-2 mt-4'>
-            {['Community','Documentation','Brand Assets','Blog','Forum','Mailing List'].map((items)=>(
-              <li>{items}</li>
+            {['Community','Documentation','Brand Assets','Blog','Forum','Mailing List'].map((items,index)=>(
+              <li key={index}>{items}</li>
               ))}
             </ul>
           </div>
