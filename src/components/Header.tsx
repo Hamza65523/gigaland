@@ -36,7 +36,8 @@ const Header = () => {
       const [colpass,setColpass] = useState(false)
       const [fix,setFix] = useState(false)
   const setFixed = ()=>{
-    if(window.screenY >= 392){
+    console.log(window.scrollY)
+    if(window.scrollY >= 40){
       setFix(true)
     }else{
       setFix(false)
@@ -73,13 +74,13 @@ const Header = () => {
           ))}
         </ul>
       </div>
-     <div className="md:hidden hidden lg:flex xl:flex items-center justify-between xl:gap-4 gap-3  h-[90px] w-[83%] mx-auto my-0">
+     <div className={`${fix&&'fixed top-0 left-0 bg-[#403f83] w-full px-24 '} md:hidden hidden lg:flex xl:flex items-center justify-between xl:gap-4 gap-3  h-[90px] w-[83%] mx-auto my-0`}>
       <div className="flex items-center xl:gap-8 gap-3">
       <div className="w-full lg:w-32">
         <Image src={Logo}   alt='logo'/>
       </div>
       <div className="">
-        <input type="text" className={` outline-none hover:border-4 border-[#59499c] xl:w-64 lg:w-36 placeholder:text-white text-[14px] bg-[#3e307b] rounded-lg px-3 py-[6px]`} placeholder='search item here...'/>
+        <input type="text" className={`${fix&&'bg-[#535390]'} outline-none hover:border-4 border-[#59499c] xl:w-64 lg:w-36 placeholder:text-white text-[14px] bg-[#3e307b] rounded-lg px-3 py-[6px]`} placeholder='search item here...'/>
       </div>
       </div>
       <div className="flex items-center lg:gap-3 xl:gap-4">
